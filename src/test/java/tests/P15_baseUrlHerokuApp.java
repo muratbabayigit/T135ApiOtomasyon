@@ -27,7 +27,7 @@ public class P15_baseUrlHerokuApp extends BaseUrlHerokuApp {
                 Response response=given().when().spec(specHerOkuApp).get("/{pp1}");
 
                 //.....Kontrol işlemi
-                response.then().assertThat().statusCode(200).body("bookingid", Matchers.hasItem(133));
+                response.then().assertThat().statusCode(200).body("bookingid",Matchers.hasSize(133));
 
 
 
