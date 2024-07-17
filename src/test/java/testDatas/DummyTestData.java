@@ -2,6 +2,9 @@ package testDatas;
 
 import org.json.JSONObject;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class DummyTestData {
 
     /*
@@ -31,6 +34,24 @@ public class DummyTestData {
         dataBody.put( "profile_image",ProfileImage);
 
         JSONObject responseBody=new JSONObject();
+        responseBody.put("status","success");
+        responseBody.put("data",dataBody);
+        responseBody.put("message","Successfully! Record has been fetched.");
+
+        return responseBody;
+
+    }
+    public static Map<String,Object> MapDataOlustur(double id,String EmployeeName,double  EmployeeSalary,double EmployeeAge,String ProfileImage){
+
+        Map<String,Object> dataBody=new HashMap<>();
+        dataBody.put("id",id);
+        dataBody.put("employee_name",EmployeeName);
+        dataBody.put("employee_salary",EmployeeSalary);
+        dataBody.put( "employee_age",EmployeeAge);
+        dataBody.put( "profile_image",ProfileImage);
+
+        Map<String,Object> responseBody=new HashMap<>();
+
         responseBody.put("status","success");
         responseBody.put("data",dataBody);
         responseBody.put("message","Successfully! Record has been fetched.");

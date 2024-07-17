@@ -4,15 +4,13 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Before;
 
-public class BaseUrlJSONPlace {
-    protected RequestSpecification specJsonPlace;
+public class BaseUrlCollectApi {
+    protected RequestSpecification specCollect;
 
     @Before
     public  void setUp(){
-        specJsonPlace=new RequestSpecBuilder()
-                .setBaseUri("https://jsonplaceholder.typicode.com")
+        specCollect=new RequestSpecBuilder()
+                .setBaseUri("https://api.collectapi.com")
                 .build();
     }
-
-
 }
