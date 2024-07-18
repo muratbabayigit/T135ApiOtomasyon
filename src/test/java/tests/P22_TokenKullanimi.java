@@ -73,7 +73,7 @@ public class P22_TokenKullanimi extends BaseUrlHerokuApp {
         //oluşturulan booking token kullanrak update ediliyor
         specHerOkuApp.pathParams("pp1","booking","pp2",bookingid);
         JSONObject innerBody= HerOkuAppData.innerDataOlustur("2024-07-30","2024-08-07");
-        JSONObject reqBody=HerOkuAppData.reqDataOlustur("Baris","Akbaş",500,true,innerBody,"wi-fi");
+        JSONObject reqBody=HerOkuAppData.reqDataOlustur("Barış","Akbaş",500,true,innerBody,"wi-fi");
 
         Response response=given().contentType(ContentType.JSON).when().spec(specHerOkuApp)
                                                                       .body(reqBody.toString())

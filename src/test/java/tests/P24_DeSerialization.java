@@ -49,7 +49,7 @@ public class P24_DeSerialization extends BaseUrlJSONPlace {
 
         Response response=given().contentType(ContentType.JSON).when().spec(specJsonPlace).body(reqMAPBody).put("/{pp1}/{pp2}");
 
-        Map<String,Object> resMAP=response.as(HashMap.class); //JSOn dönen cevabı Map formatına dönüştürdük
+        Map<String,Object> resMAP=response.as(HashMap.class); //JSON dönen cevabı Map formatına dönüştürdük
 
         assertEquals(expMAPBody.get("title"),resMAP.get("title"));
         assertEquals(expMAPBody.get("body"),resMAP.get("body"));
